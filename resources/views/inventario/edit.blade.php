@@ -12,11 +12,11 @@
                   @csrf
                   @method('PUT')
                   <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <div class="w-full px-3 mb-6 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                         Nombre del producto
                       </label>
-                      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="nombre" type="text" placeholder="Nombre" value="{{old('nombre',$producto->nombre)}}">
+                      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border  py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="nombre" type="text" placeholder="Nombre" value="{{old('nombre',$producto->nombre)}}">
                       @error('nombre')
                           <p class="text-red-500 text-xs italic">{{ $message }}</p>
                       @enderror
@@ -24,18 +24,18 @@
                     </div>
                   </div>
                   <div class="flex flex-wrap -mx-3 mb-6">
-                      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                      <div class="w-full px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                          Descripcion
                         </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="descripcion" type="text" placeholder="descripcion" value="{{old('descripcion',$producto->descripcion)}}">
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border  py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="descripcion" type="text" placeholder="descripcion" value="{{old('descripcion',$producto->descripcion)}}">
                         @error('descripcion')
                             <p class="text-red-500 text-xs italic">{{ $message }}</p>
                         @enderror
                         
                       </div>
                     </div>
-                    <button class=" text-black rounded border-2 ml-3 my-3" type="submit">
+                    <button class=" text-blue-900 font-bold py-2 px-4 rounded border-2 border-blue-800 ml-2" type="submit">
                       Guardar
                     </button>
                 </form>

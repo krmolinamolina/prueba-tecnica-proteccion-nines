@@ -1,10 +1,12 @@
 <div>
     <div class="grid grid-cols-12">
-        <div class="col-start-5 text-left col-span-1 mr-1 px-2 py-2">
+        <div class="col-start-5 text-left col-span-6 mr-1 px-2 py-2">
          
             <input type="text" wire:model.lazy="buscar" name="buscar" id="buscar" placeholder="buscar..." class="w-full px-3 py-2  borde border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300">
         </div>
-        <div class="mt-2">
+        
+    </div>
+   <div class="mt-2">
             <a href="{{ route('inventario.create') }}" class=" text-blue-900 font-bold py-2 px-4 rounded border-2 border-blue-800 ml-2 " >
                 Crear producto
             </a>
@@ -12,8 +14,6 @@
                 Registrar Ingreso
             </a>
         </div>
-    </div>
-   
     <br>
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -67,7 +67,7 @@
                                         <form action="{{ route("inventario.destroy", $producto->id_producto) }}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" value="Eliminar" class="btn btn-danger btn-sm" onclick="return confirm('¿Desea eliminar?')">
+                                            <input type="submit" value="Eliminar" class=" bg-red-200 text-red-600" onclick="return confirm('¿Desea eliminar?')">
                                         </form>
                                 </div>
                             </td>

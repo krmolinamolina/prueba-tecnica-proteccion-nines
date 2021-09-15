@@ -23,14 +23,8 @@ class IndexList extends Component
 
     public function render()
     {
-        $ventas = Venta::with('cliente');
-        if ($this->buscar) {
-            $busca=$this->buscar;
-            $ventas->where(function($b) use ($busca) {
-                    $b->orWhere('nombre','like','%'.$busca.'%')
-                    ->orWhere('descripcion','like','%'.$busca.'%');
-                    });
-        }
+        $ventas = Venta::with('cliente')->whereDate('created_at',$this->ano);
+
         $ventas=$ventas->paginate(10);
         return view('livewire.ventas.index-list',compact('ventas'));
     }
