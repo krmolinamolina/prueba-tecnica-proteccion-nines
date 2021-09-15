@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\inventario\VentasController;
 use App\Http\Controllers\inventario\ComprasController;
 use App\Http\Controllers\inventario\InventarioController;
@@ -41,4 +42,6 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard/inventario/compra/create',  [ComprasController::class, 'create'])->name('compra.create');
     Route::post('dashboard/inventario/compras/store',  [ComprasController::class, 'store'])->name('compra.store');
 
+
+    Route::resource('dashboard/user', UserController::class);
 });
