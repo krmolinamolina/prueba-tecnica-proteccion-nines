@@ -11,7 +11,7 @@
                     <div class="flex flex-col">
                         <div class="mt-2">
                             <a href="{{ route('user.create') }}" class=" text-blue-900 font-bold py-2 px-4 rounded border-2 border-blue-800 ml-2 " >
-                                Crear producto
+                                Crear usuario
                             </a>
                             
                         </div>
